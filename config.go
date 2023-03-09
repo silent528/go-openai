@@ -21,10 +21,10 @@ type ClientConfig struct {
 	EmptyMessagesLimit uint
 }
 
-func DefaultConfig(authToken string) ClientConfig {
+func DefaultConfig(apiURL, authToken string) ClientConfig {
 	return ClientConfig{
 		HTTPClient: &http.Client{},
-		BaseURL:    apiURLv1,
+		BaseURL:    apiURL,
 		OrgID:      "",
 		authToken:  authToken,
 
