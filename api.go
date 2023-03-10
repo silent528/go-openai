@@ -15,7 +15,7 @@ type Client struct {
 
 // NewClient creates new OpenAI API client.
 func NewClient(authToken string) *Client {
-	config := DefaultConfig(authToken)
+	config := DefaultConfig(apiURLv1, authToken)
 	return &Client{config}
 }
 
