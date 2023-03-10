@@ -28,7 +28,7 @@ func NewClientWithConfig(config ClientConfig) *Client {
 //
 // Deprecated: Please use NewClientWithConfig.
 func NewOrgClient(authToken, org string) *Client {
-	config := DefaultConfig(authToken)
+	config := DefaultConfig(apiURLv1, authToken)
 	config.OrgID = org
 	return &Client{config}
 }
